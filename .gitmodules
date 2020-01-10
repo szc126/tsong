@@ -1,0 +1,6 @@
+[submodule "normalize_css"]
+	path = normalize_css
+	url = https://github.com/necolas/normalize.css/
+[submodule "text/KR1h0005"]
+	path = text/KR1h0005
+	url = https://github.com/kanripo/KR1h0005

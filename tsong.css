@@ -1,0 +1,103 @@
+/*
+	Mostly important
+*/
+
+#tsong-text {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.tsong-page {
+	display: flex;
+	flex-direction: row-reverse;
+	line-height: 1em;
+	text-align: center;
+	margin: .5em 1em;
+}
+
+.tsong-line {
+	width: 1em;
+	padding: .5em;
+	box-sizing: content-box; /* `border-box` breaks things */
+}
+
+.tsong-char {
+	display: block; /* `inline-block` causes misalignment of `.tsong-wt-c`, example `(いろ)(は)` */
+	width: 1em; /* force hanging punctuation */
+	font-feature-settings: "vert"; /* rotate brackets and whatever */
+}
+
+.tsong-punc {
+	font-feature-settings: normal; /* place kutouten in the lower left of their bounding box */
+}
+
+.tsong-wt {
+	font-size: .5em;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.tsong-wt-a, .tsong-wt-b, .tsong-wt-mono {
+	position: relative;
+}
+
+.tsong-wt-a {
+	left: .25em;
+}
+
+.tsong-wt-b {
+	right: .25em;
+}
+
+.tsong-wt-mono {
+	transform: translateX(-50%);
+}
+
+/*
+	Unimportant
+*/
+
+#tsong-text {
+	font-size: 5vh;
+}
+
+#tsong-text {
+	flex-wrap: wrap;
+}
+
+.tsong-page {
+	flex-wrap: wrap;
+}
+
+.tsong-line {
+	border: 2px solid black;
+}
+
+.tsong-line:first-of-type, .tsong-line + .tsong-line {
+	margin-left: -2px;
+}
+
+#tsong-text-raw {
+	width: 100%;
+}
+
+p {
+	position: relative;
+}
+
+p[id]:before {
+	content: attr(id);
+	position: absolute;
+	writing-mode: vertical-rl; /* 唔？ */
+	font-size: .5em;
+	line-height: 1.5;
+	right: -1.5em;
+}
+
+.tsong-char {
+	position: relative;
+}
+
+.tsong-punc {
+	position: absolute;
+}

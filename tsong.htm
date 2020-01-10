@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="lzh">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<link type="text/css" href="tsong.css" rel="stylesheet">
+		<script src="tsong.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<section>
+				<h2>說明</h2>
+				<p>
+					試以 flexbox 之術再現縱書於 CSS。
+				</p>
+				<p>
+					汝所謂 writing-mode 者。何也。未聞之。
+				</p>
+				<p>
+					論語之全文。<a href="https://github.com/kanripo/KR1h0005">漢籍リポジトリ</a>制之。
+				</p>
+			</section>
+
+			<section>
+				<h2>設定</h2>
+				<fieldset>
+					<legend>設定</legend>
+					<dl>
+						<dt>
+							<label for="tsong-text-selection">文</label>
+						</dt>
+						<dd>
+							<select id="tsong-text-selection">
+							</select>
+						</dd>
+						<dt>
+							<label for="tsong-vertical-character-spacing">字距</label>
+						</dt>
+						<dd>
+							<input
+								type="range"
+								id="tsong-vertical-character-spacing"
+								min="1"
+								max="2"
+								step="0.01"
+								value="0"
+							>
+						</dd>
+						<dt>
+							<label for="tsong-warityuu-character-height">割註字高</label>
+						</dt>
+						<dd>
+							<input
+								type="range"
+								id="tsong-warityuu-character-height"
+								min="1"
+								max="2"
+								step="0.01"
+								value="1"
+							>
+						</dd>
+					</dl>
+				</fieldset>
+			</section>
+
+			<section>
+				<h2>文</h2>
+				<div id="tsong-text" lang="lzh">
+				</div>
+			</section>
+
+			<section>
+				<h2>璞文</h2>
+				<textarea id="tsong-text-raw" lang="lzh" rows="10">
+				</textarea>
+			</section>
+		</main>
+	</body>
+</html>
